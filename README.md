@@ -17,6 +17,6 @@ GET	/quotes/random	Citação motivacional aleatória
 md_user — Usuários
 md_habit — Hábitos (vinculados ao usuário)
 md_habit_record — Registros diários de conclusão
-👤 Autora
+👤 Autor 
 Matheus Mariotto - rm560276
 João Vinícius - rm559369
