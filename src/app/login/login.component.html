@@ -1,0 +1,27 @@
+<div class="container" style="display:flex; justify-content:center; align-items:center; min-height:100vh;">
+  <div class="card" style="width:100%; max-width:400px;">
+    <h1 style="text-align:center; margin-bottom:24px; font-size:24px;">🌅 MyDay</h1>
+    <h2 style="text-align:center; margin-bottom:20px; font-size:18px; color:#4f46e5;">Entrar</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div style="margin-bottom:14px;">
+        <input class="input" formControlName="email" placeholder="Email" type="email">
+      </div>
+      <div style="margin-bottom:14px;">
+        <input class="input" formControlName="password" placeholder="Senha" type="password">
+      </div>
+
+      @if (errorMessage()) {
+        <p class="error-msg">{{ errorMessage() }}</p>
+      }
+
+      <button class="btn btn-primary" type="submit" style="width:100%; margin-top:10px;">
+        Entrar
+      </button>
+    </form>
+
+    <p style="text-align:center; margin-top:16px; font-size:14px;">
+      Não tem conta? <a routerLink="/register" style="color:#4f46e5; text-decoration:none; font-weight:600;">Criar Conta</a>
+    </p>
+  </div>
+</div>

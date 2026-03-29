@@ -1,0 +1,16 @@
+<div class="register-container">
+  <h1>🌅 MyDay</h1>
+  <h2>Criar Conta</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Nome" required />
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required />
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <button type="submit">Criar Conta</button>
+  </form>
+
+  <p>Já tem conta? <a routerLink="/login">Entrar</a></p>
+</div>
